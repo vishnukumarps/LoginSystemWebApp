@@ -33,10 +33,18 @@ namespace LoginSystemWebApp
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
-            services.AddAuthentication().AddFacebook(facebookOptions =>
+            //services.AddAuthentication().AddFacebook(facebookOptions =>
+            //{
+            //    facebookOptions.AppId = "199681098151141";//Configuration["Authentication:Facebook:AppId"];
+            //    facebookOptions.AppSecret = "cd5d6a2d6075f62dce3812e0c177a343";// Configuration["Authentication:Facebook:AppSecret"];
+            //});
+
+
+            services.AddAuthentication().AddTwitter(twitterOptions =>
             {
-                facebookOptions.AppId = "199681098151141";//Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = "cd5d6a2d6075f62dce3812e0c177a343";// Configuration["Authentication:Facebook:AppSecret"];
+                twitterOptions.ConsumerKey = "MrZDApD0dBmOkxW68ie1HXxYI";
+                twitterOptions.ConsumerSecret = "KBidP63FhwKBGNel354KhpFvQUT50BDsb0G5QRPes1TYbwdjVJ";
+                twitterOptions.RetrieveUserDetails = true;
             });
         }
 
