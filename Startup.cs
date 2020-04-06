@@ -44,7 +44,7 @@ namespace LoginSystemWebApp
             {
                 twitterOptions.ConsumerKey = "MrZDApD0dBmOkxW68ie1HXxYI";
                 twitterOptions.ConsumerSecret = "KBidP63FhwKBGNel354KhpFvQUT50BDsb0G5QRPes1TYbwdjVJ";
-                //twitterOptions.RetrieveUserDetails = true;
+               twitterOptions.RetrieveUserDetails = true;
             });
         }
 
