@@ -39,7 +39,7 @@ namespace LoginSystemWebApp
             //    facebookOptions.AppSecret = "cd5d6a2d6075f62dce3812e0c177a343";// Configuration["Authentication:Facebook:AppSecret"];
             //});
 
-            var connection = @"Server=db;Database=master;User=sa;Password=Your_password123;";
+            var connection = "Server=db;Database=master;User=sa;Password=Your_password123;";
             services.AddAuthentication().AddTwitter(twitterOptions =>
             {
                 twitterOptions.ConsumerKey = "MrZDApD0dBmOkxW68ie1HXxYI";
